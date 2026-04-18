@@ -3,6 +3,7 @@ package ejbprojects.demoejb;
 import ejbprojects.demoejb.entities.Entreprise;
 import ejbprojects.demoejb.service.IGestion;
 import jakarta.annotation.PostConstruct;
+import jakarta.ejb.Singleton;
 import jakarta.ejb.Startup;
 import jakarta.inject.Inject;
 import java.io.IOException;
@@ -10,7 +11,7 @@ import java.io.ObjectInputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-
+@Singleton
 @Startup
 public class Connection {
     @Inject
